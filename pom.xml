@@ -76,8 +76,8 @@
 				<version>${mavencompiler.version}</version>
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
-					<source>${jre.version}</source>
-					<target>${jre.version}</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 
