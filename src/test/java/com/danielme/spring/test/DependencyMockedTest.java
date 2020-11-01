@@ -19,7 +19,7 @@ public class DependencyMockedTest {
 
     @Test
     public void testSubdependency() {
-        assertEquals("mocked", dependency.getSubdepedencyClassName());
+        assertEquals("mocked", dependency.getSubdependencyClassName());
     }
 
 }

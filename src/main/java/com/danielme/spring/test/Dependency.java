@@ -6,30 +6,30 @@ import org.springframework.stereotype.Component;
 @Component
 public class Dependency {
 
-	private final SubDependency subDependency;
+    private final SubDependency subDependency;
 
-	@Value("${url}")
-	private String url;
+    @Value("${url}")
+    private String url;
 
-	public Dependency(SubDependency subDependency) {
-		super();
-		this.subDependency = subDependency;
-	}
+    public Dependency(SubDependency subDependency) {
+        super();
+        this.subDependency = subDependency;
+    }
 
-	public String getClassName() {
-		return this.getClass().getSimpleName();
-	}
+    public String getClassName() {
+        return this.getClass().getSimpleName();
+    }
 
-	public String getSubdepedencyClassName() {
-		return subDependency.getClassName();
-	}
+    public String getSubdependencyClassName() {
+        return subDependency.getClassName();
+    }
 
-	public int addTwo(int i) {
-		return i + 2;
-	}	
+    public int addTwo(int i) {
+        return i + 2;
+    }
 
-	public String getUrl() {
-		return url;
-	}
+    public String getUrl() {
+        return url;
+    }
 
 }
