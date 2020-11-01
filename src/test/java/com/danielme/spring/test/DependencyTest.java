@@ -12,39 +12,36 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.rules.SpringClassRule;
 import org.springframework.test.context.junit4.rules.SpringMethodRule;
 
-import com.danielme.spring.test.Dependency;
-import com.danielme.spring.test.SubDependency;
-
 //@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {AppConfiguration.class})
 @TestPropertySource("classpath:test.properties")
-public class DependencyTest {	
+public class DependencyTest {
 
-	@ClassRule 
-	public static final SpringClassRule SPRING_CLASS_RULE = new SpringClassRule();	
+	@ClassRule
+	public static final SpringClassRule SPRING_CLASS_RULE = new SpringClassRule();
 	@Rule
     public final SpringMethodRule springMethodRule = new SpringMethodRule();
-	
+
 	@Autowired
 	private Dependency dependency;
-	
+
 	@Test
-	public void testDependency(){		
-		assertEquals(dependency.getClass().getSimpleName(), dependency.getClassName());		
+	public void testDependency(){
+		assertEquals(dependency.getClass().getSimpleName(), dependency.getClassName());
 	}
-	
+
 	@Test
-	public void testAddTwo(){		
-		assertEquals(3, dependency.addTwo(1));		
+	public void testAddTwo(){
+		assertEquals(3, dependency.addTwo(1));
 	}
-	
+
 	@Test
-	public void testSubdependency(){		
+	public void testSubdependency(){
 		assertEquals(SubDependency.class.getSimpleName(), dependency.getSubdepedencyClassName());
 	}
-	
+
 	@Test
-	public void testUrl(){		
+	public void testUrl(){
 		assertEquals("http://danielmedina.info", dependency.getUrl());
 	}
 }
