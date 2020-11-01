@@ -15,7 +15,7 @@
 
         <springframework.version>5.2.1.RELEASE</springframework.version>
         <mavencompiler.version>3.2</mavencompiler.version>
-        <log4jframework.version>2.5</log4jframework.version>
+        <log4jframework.version>2.13.3</log4jframework.version>
         <junit.version>4.13.1</junit.version>
         <slf4j.version>1.7.19</slf4j.version>
         <mockito.version>3.6.0</mockito.version>
