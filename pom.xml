@@ -4,7 +4,7 @@
     <groupId>com.danielme.spring</groupId>
     <artifactId>spring-test</artifactId>
     <version>1.0</version>
-    <name>spring-testing</name>
+    <name>spring-testing-junit4</name>
     <packaging>jar</packaging>
 
     <description>Spring testing</description>
@@ -13,12 +13,10 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <springframework.version>5.2.1.RELEASE</springframework.version>
-        <mavencompiler.version>3.2</mavencompiler.version>
-        <log4jframework.version>2.5</log4jframework.version>
-        <junit.version>4.13.1</junit.version>
-        <slf4j.version>1.7.19</slf4j.version>
-        <mockito.version>3.6.0</mockito.version>
+        <springframework.version>5.3.24</springframework.version>
+        <log4jframework.version>2.19.0</log4jframework.version>
+        <junit.version>4.13.2</junit.version>
+        <mockito.version>4.10.0</mockito.version>
     </properties>
 
     <dependencies>
@@ -29,7 +27,7 @@
             <version>${springframework.version}</version>
         </dependency>
 
-        <!-- Loggin with Log4j2 - Spring integration with SL4J Facade -->
+        <!-- Log with Log4j2 - Spring integration with SL4J Facade -->
 
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -74,20 +72,4 @@
 
     </dependencies>
 
-    <build>
-
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${mavencompiler.version}</version>
-                <configuration>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
-        </plugins>
-
-    </build>
 </project>
