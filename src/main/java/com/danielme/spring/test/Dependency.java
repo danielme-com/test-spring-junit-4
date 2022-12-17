@@ -7,25 +7,15 @@ import org.springframework.stereotype.Component;
 public class Dependency {
 
     private final SubDependency subDependency;
+    private final String url;
 
-    @Value("${url}")
-    private String url;
-
-    public Dependency(SubDependency subDependency) {
-        super();
+    public Dependency(SubDependency subDependency, @Value("${url}") String url) {
         this.subDependency = subDependency;
-    }
-
-    public String getClassName() {
-        return this.getClass().getSimpleName();
+        this.url = url;
     }
 
     public String getSubdependencyClassName() {
         return subDependency.getClassName();
-    }
-
-    public int addTwo(int i) {
-        return i + 2;
     }
 
     public String getUrl() {
